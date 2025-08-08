@@ -1,0 +1,129 @@
+# Material Topics
+
+**This module** in **Carbon Aegis** is designed to help organisations assess and prioritize the ESG factors that are most relevant to their business operations. This module is built to align with the **EU CSRD/ESRS** regulations and the **EFRAG VSME** standards, ensuring that all organizations can determine both **impact materiality** and **financial materiality** for their operations.
+
+## 1. Topic Identification:
+
+Lists potential ESG topics. User can select or add issues (e.g. emissions, labor rights). Mapping: ESRS 1 requires determining material topics. Inputs: Checkbox or tag list of common topics. Entry Mode: Manual selection; Excel import of topic list. Templates: Pre-populated list from ESRS/Gri taxonomy. Localization: Topic names in EN/DE.
+
+**Data for Figma:**
+
+**Purpose**: To allow users to select ESG topics relevant to their business and industry.
+
+### **Input Form:**
+
+- *Input Type*: Checkbox/Tag list (Multi-select)
+- *Display Grouped by ESRS Themes*:
+    - **Environment (E1–E5)**
+        - GHG Emissions
+        - Energy Consumption
+        - Water & Marine Resources
+        - Biodiversity & Ecosystems
+        - Circular Economy & Waste
+    - **Social (S1–S4)**
+        - Working Conditions
+        - Equal Opportunity (Diversity, Inclusion)
+        - Health & Safety
+        - Human Rights
+        - Affected Communities
+        - End-users/Consumers
+    - **Governance (G1)**
+        - Anti-Corruption
+        - Board Diversity & Structure
+        - ESG Risk Management
+        - Executive Remuneration
+        - Whistleblower Mechanisms
+    - *Tooltip*: *"Tick the topics that are relevant to your business or industry. You may also add your own."*
+    
+    ---
+    
+    - **Add Custom Topic**
+        - *Input Type*: Free-text
+        - *Tooltip*: *"If a topic isn’t listed, enter it here to add a custom issue (e.g. AI ethics, supply chain disruption)."*
+    
+    ---
+    
+
+## 2. Impact/Magnitude Scoring:
+
+Scores each topic for impact on business and stakeholders. Inputs: Numeric or Likert-scale sliders. Entry Mode: Manual scores. Templates: Materiality scoring template. Localization: Scale labels localized (e.g. “High/Medium/Low”).
+
+**Data for Figma:**
+Purpose: Allows users to rate each selected topic’s **impact on the company** (financial materiality) and **impact on people/planet** (impact materiality), along with stakeholder relevance.
+
+### Input Form (Per Topic – Repeatable Section)
+
+| Field | Type | Tooltip | Example |
+| --- | --- | --- | --- |
+| **Financial Impact Score** | Slider (0–5) or Likert Dropdown (None, Low, Medium, High, Critical) | *"How significantly does this topic affect your business's ability to generate value?"* | High |
+| **Impact on Stakeholders/Society** | Slider (0–5) or Likert Dropdown | *"How significantly does your organization’s activities related to this topic impact people or the environment?"* | Medium |
+| **Stakeholder Concern Level** | Dropdown: Low, Medium, High | *"What is the level of concern shown by stakeholders for this issue?"* | High |
+| **Justification (Narrative)** | Multi-line text | *"Describe why this topic is scored this way. Reference internal data or stakeholder input."* | “Significant CO₂ emissions from operations; EU customers pushing for decarbonization.” |
+
+### Scoring Logic (for Backened)
+
+- Each score normalized to 0–5
+- Weighting factors:
+    - Financial Score (FS) (40%)
+    - Impact Score (IS) (40%)
+    - Stakeholder Concern (SC) (20%)
+- **Materiality Index (0–5)** = Weighted average
+    
+    Materiality Index = (FS×0.4)+(IS×0.4)+(SC×0.2)
+    
+- **Threshold**: Topics scoring **>3.0** are flagged as "Material"
+
+| **Materiality Index** | **Interpretation** |
+| --- | --- |
+| 0.0 – 1.9 | Not material |
+| 2.0 – 2.9 | Low materiality (monitor only) |
+| 3.0 – 3.9 | Material (report & manage) |
+| 4.0 – 5.0 | Highly material (priority topic) |
+
+## 3. Materiality Matrix:
+
+Visual prioritization. Inputs: Coordinates generated from scores. Entry Mode: Automatic calculation from scores. Localization: Axis labels in EN/DE.
+
+**Data for Figma:**
+
+**Purpose:** Automatically plot ESG topics based on scoring into a 2D matrix with editable labels and tooltips.
+
+### Matrix Design
+
+- **X-axis**: Financial Materiality
+- **Y-axis**: Impact Materiality
+- **Bubble size**: Stakeholder concern level
+- **Tooltip on Hover**:
+    - Topic Name
+    - All 3 scores
+- **Matrix Caption**: “Double Materiality Matrix”
+
+### Settings (Editable)
+
+- Axis Label Language: EN / DE
+- Threshold Indicator (dotted line): Set at value = 3
+- Filter by: Topic group (E/S/G), or Custom Tags
+- Export Options: PNG, SVG, PDF
+
+## 4. Material Topics Report:
+
+Final list of material topics with rationale. Inputs: Long-text explanation, dropdown for regulatory references. Entry Mode: Manual editing of narrative. Templates: Narrative template. Localization: Explanations written in both languages (if needed).
+
+**Data for Figma:**
+
+**Purpose**: Generate a final list of material topics for disclosure in sustainability reporting.
+
+### Input Form - (Per Topic Repeatable)
+
+| Field | Type | Tooltip | Example |
+| --- | --- | --- | --- |
+| **Material Topic Name** | Auto-filled | - | Water Usage |
+| **Why it is Material** | Multi-line Text | *"Summarize why the topic is material for your business, citing data or stakeholder expectations."* | “Water-intensive operations in drought-prone areas create reputational and operational risk.” |
+| **Impacted Stakeholders** | Multi-select dropdown | *"Which stakeholders are most affected by this topic?"* | Employees, Regulators, Communities |
+| **Business Risk or Opportunity** | Dropdown: Risk, Opportunity, Both | *"Does this topic present a risk, opportunity, or both?"* | Both |
+| **Linked ESRS/GRI/SASB Standard** | Multi-select Dropdown | *"Select any standard(s) that address this material topic."* | ESRS E3 |
+| **Management Response** | Multi-line text | *"Summarize how the company is responding to or managing this material issue."* | “Water recycling systems have been installed at major plants.” |
+
+### Output
+
+- Table of material topics with all fields

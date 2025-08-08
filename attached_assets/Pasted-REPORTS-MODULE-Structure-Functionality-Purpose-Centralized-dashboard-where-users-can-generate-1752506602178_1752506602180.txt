@@ -1,0 +1,73 @@
+REPORTS MODULE: Structure & Functionality
+🧩 Purpose:
+Centralized dashboard where users can generate, preview, and export sustainability reports.
+
+Dynamically integrates data from all other Carbon Aegis modules.
+
+Provides editable, human-readable reports aligned with official disclosure structures (starting with ESRS).
+
+Supports multilingual output (EN/DE).
+
+Future-ready for additional frameworks.
+
+🗂️ 1. Dashboard View
+🔷 UI: List of Available Report Templates
+Report Name	Framework	Status	Action
+European Sustainability Reporting Standards (ESRS)	CSRD (EU)	✅ Ready	🔘 Generate Report
+Global Reporting Initiative (GRI)	GRI Standards	🟡 Coming Soon	🔒
+Sustainability Accounting Standards Board (SASB)	ISSB-aligned	🟡 Coming Soon	🔒
+Task Force on Climate-related Financial Disclosures (TCFD)	Voluntary	🟡 Coming Soon	🔒
+
+🛎️ Clicking “Generate Report” under ESRS opens the report editor view populated with module data.
+
+📝 2. Editable Report Generator (ESRS Template)
+Auto-generated using data from existing modules, following the ESRS Reporting Flow & Disclosure Blocks.
+
+📚 Report Outline (Auto-Populated from Modules)
+Section	Source Module	Sub-sections (Editable)
+1. General Information	Company Profile	Entity identity, legal structure, group scope, reporting period, sector, geography
+2. Governance, Strategy & Business Model	Gov & Policies, Company Profile, Risk Management	Governance roles, strategic priorities, business model, ESG oversight, due diligence
+3. Materiality Assessment	Material Topics	Topics identified, stakeholder involvement, matrix, thresholds, rationale
+4. Impacts, Risks & Opportunities (IRO)	Risk Management	IRO register, mitigation plans, value chain mapping, impact scoring
+5. Policies, Actions & KPIs	Data Collection, Performance Metrics	ESG topics grouped by E, S, G, with KPIs, targets, data sources, units
+6. EU Taxonomy Alignment	Compliance, Company Profile	% of eligible/aligned activities, narrative explanation
+7. ESRS Topic Disclosures (E1–E5, S1–S4, G1)	Data Collection	Automatically maps each KPI and qualitative input under the correct topic
+8. Forward-Looking Statements	Business Strategy	Future goals, transition plans, climate targets
+9. Appendix	Uploaded Files	Due diligence policy, stakeholder lists, site maps, audit trails
+
+🔧 Each Section Has:
+Feature	Description
+Editable Fields	Every narrative field can be manually edited after auto-fill
+Sync Button	Refresh data from source modules
+Flag Missing	Highlights incomplete or missing data
+Preview Mode	Toggle between Edit / Print view
+Language Switcher	English 🇬🇧 / German 🇩🇪 toggle for all text
+Export Options	PDF, Word, or XHTML (XBRL-ready)
+
+🛠️ 3. Backend Logic for Report Population
+This logic ensures correct data is pulled from each form.
+
+Report Field	Pull From	Field Example
+Legal Entity Name	Company Profile → Legal Name	"GreenTech GmbH"
+Scope of Consolidation	Company Profile → Subsidiary Table	Auto list with ownership %
+Due Diligence Approach	Risk Management → Due Diligence Section	Narrative & framework dropdown
+Material Topics	Material Topics Module → Final Report Table	Auto table with scores, justifications
+GHG Emissions	Data Collection → E1 KPI list	Scope 1, 2, 3 (in tonnes CO₂e)
+Climate Targets	Business Strategy → Transition Plan Table	"Net Zero by 2040"
+
+💬 4. User Experience
+🔷 Actions per Report
+📝 Edit Section: Open rich-text field and embedded form input
+
+🔄 Sync Data: Refresh with latest module input
+
+🔗 Attach File: Upload evidence to section (optional)
+
+🟡 Mark as Draft: User can save progress
+
+✅ Mark as Final: Locks report for export
+
+🧪 5. Validation Layer
+✅ Auto-check for minimum required fields per ESRS (e.g., must have impact materiality matrix, GHG totals)
+
+⚠️ Flags incomplete sections

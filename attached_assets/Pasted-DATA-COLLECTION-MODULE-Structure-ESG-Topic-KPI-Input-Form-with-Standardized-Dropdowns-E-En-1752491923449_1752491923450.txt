@@ -1,0 +1,107 @@
+DATA COLLECTION MODULE
+Structure: ESG Topic ➝ KPI ➝ Input Form with Standardized Dropdowns
+🌱 E – Environmental Data
+📘 Topic: E1 – Climate Change
+KPI	Metric Type	Unit Options
+Scope 1 GHG Emissions	Quantitative	tCO₂e
+Scope 2 GHG Emissions	Quantitative	tCO₂e (market/location-based)
+Scope 3 GHG Emissions	Quantitative	tCO₂e
+Energy Consumption	Quantitative	kWh, MWh, GJ
+Energy Intensity per Revenue	Ratio	kWh/EUR
+Emissions Intensity	Ratio	tCO₂e/FTE or tCO₂e/EUR revenue
+Carbon Reduction Target	% Reduction	%, Target Year
+
+Dropdown Options for Each KPI:
+
+Frequency: Monthly, Quarterly, Annually
+
+Source Type: Energy Bills, ERP, Utility API, Emissions Tool, IoT Meter
+
+Collection Method: Manual Upload, API, Excel Import
+
+Assurance Level: None, Limited, Reasonable, Third-Party Verified
+
+Verification Status: Verified, Not Verified, Internally Reviewed
+
+Confidentiality: Public, Internal Only, Management Restricted
+
+📘 Topic: E2 – Pollution
+KPI	Metric Type	Unit Options
+NOx, SOx, PM emissions	Quantitative	kg/year
+Chemical Use (by substance)	Quantitative	Litres, kg
+Hazardous Waste Generated	Quantitative	Tonnes/year
+
+📘 Topic: E3 – Water & Marine Resources
+KPI	Metric Type	Unit Options
+Water Withdrawal	Quantitative	m³
+Water Consumption	Quantitative	m³
+Discharges to Water	Quantitative	m³, mg/L (with contaminant detail)
+% Water Recycled	Ratio	%
+
+📘 Topic: E4 – Biodiversity & Ecosystems
+KPI	Metric Type	Unit Options
+Sites near sensitive biodiversity areas	Count	Count
+Land Use (hectares converted)	Quantitative	ha/year
+Restoration Projects	Qualitative	Text
+
+📘 Topic: E5 – Circular Economy & Resource Use
+KPI	Metric Type	Unit Options
+Total Waste Generated	Quantitative	Tonnes
+% Waste Recycled	Ratio	%
+Reused Material Share	Ratio	%
+Packaging Circularity	Qualitative	Text, %, kg
+
+👥 S – Social Data
+📘 Topic: S1 – Own Workforce
+KPI	Metric Type	Unit Options
+Total Employees	Quantitative	Count (FTEs)
+Gender Ratio	Ratio	% male, % female, % non-binary
+Pay Gap (gender)	Ratio	%
+Training Hours per Employee	Quantitative	Hours/year
+Occupational Injuries (LTIR)	Quantitative	Rate per 1 million hours
+Turnover Rate	Ratio	%
+
+📘 Topic: S2 – Workers in Value Chain
+KPI	Metric Type	Unit Options
+% Suppliers Screened for Labor Practices	Ratio	%
+Human Rights Incidents	Quantitative	Count/year
+Audits Conducted	Quantitative	Count
+Remediation Actions Taken	Qualitative	Text, Count
+
+📘 Topic: S3 – Affected Communities
+KPI	Metric Type	Unit Options
+Community Engagement Projects	Count / Qualitative	Number, Text
+% Revenue in High-Risk Areas	Ratio	%
+Displacement Events	Quantitative	Count
+
+📘 Topic: S4 – Consumers/End-users
+KPI	Metric Type	Unit Options
+Product Safety Incidents	Quantitative	Count/year
+Customer Satisfaction Score	Quantitative	Index score (1–10)
+Complaints Received & Resolved	Ratio	%, Count
+
+🏛️ G – Governance Data
+📘 Topic: G1 – Business Conduct
+KPI	Metric Type	Unit Options
+Code of Conduct Training %	Ratio	%
+Whistleblower Cases	Quantitative	Count
+Anti-corruption Incidents	Quantitative	Count
+Legal Fines Paid	Monetary	EUR/year
+
+📘 Topic: GOV-2 – Governance Roles & Oversight
+KPI	Metric Type	Unit Options
+ESG Responsibility at Board Level	Qualitative	Text
+Executive Compensation Linked to ESG	Yes/No	Toggle
+ESG Performance Oversight Frequency	Frequency	Monthly, Quarterly, Annually
+
+📋 Standard Input Fields for Each KPI Entry
+Field	Type	Dropdown Options
+Data Owner	Dropdown	Sustainability Officer, HR, Finance, Legal, Procurement, External Consultant
+Source Type	Multi-select	ERP, HRIS, Utility Bill, IoT Sensors, Supplier Reports, Audit Logs
+Collection Frequency	Dropdown	Real-Time, Monthly, Quarterly, Annually
+Collection Method	Dropdown	Manual Entry, Spreadsheet Upload, Automated Feed/API, Audit Submission
+Assurance Level	Dropdown	None, Limited Assurance, Reasonable Assurance, Third-Party Certified
+Verification Status	Dropdown	Not Verified, Internally Reviewed, Third-Party Verified
+Confidentiality	Dropdown	Public Disclosure, Internal Only, Sensitive (Management Only)
+Supporting File Upload	File upload	Excel, PDF, CSV, Word
+

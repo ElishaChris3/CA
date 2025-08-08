@@ -1,0 +1,157 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500&display=swap";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(210, 7%, 20%);
+  --muted: hsl(210, 40%, 98%);
+  --muted-foreground: hsl(215, 13%, 56%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 7%, 20%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 7%, 20%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(156, 55%, 35%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(210, 40%, 98%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --accent: hsl(210, 40%, 98%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(210, 7%, 20%);
+  --radius: 0.5rem;
+
+  /* Carbon Aegis Brand Colors */
+  --ca-green-normal: hsl(156, 55%, 35%);
+  --ca-green-hover: hsl(156, 55%, 38%);
+  --ca-red-normal: hsl(347, 50%, 74%);
+  --ca-red-light: hsl(347, 50%, 98%);
+  --ca-red-light-active: hsl(347, 50%, 90%);
+  --ca-grey-light: hsl(0, 0%, 96%);
+  --ca-grey-light-active: hsl(0, 0%, 86%);
+  --ca-grey-normal: hsl(0, 0%, 56%);
+  --ca-grey-dark: hsl(0, 0%, 42%);
+  --ca-grey-dark-active: hsl(0, 0%, 25%);
+  --ca-grey-darker: hsl(0, 0%, 20%);
+
+  /* Chart colors */
+  --chart-1: hsl(156, 55%, 35%);
+  --chart-2: hsl(156, 55%, 45%);
+  --chart-3: hsl(156, 55%, 55%);
+  --chart-4: hsl(347, 50%, 74%);
+  --chart-5: hsl(347, 50%, 84%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(156, 55%, 35%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(212, 72%, 59%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer components {
+  .ca-brand-green {
+    @apply bg-[var(--ca-green-normal)] hover:bg-[var(--ca-green-hover)];
+  }
+
+  .ca-brand-red {
+    @apply bg-[var(--ca-red-normal)];
+  }
+
+  .ca-sidebar-nav {
+    @apply flex items-center space-x-3 px-4 py-3 text-[var(--ca-grey-dark)] hover:bg-[var(--ca-grey-light)] rounded-lg transition-colors;
+  }
+
+  .ca-sidebar-nav-active {
+    @apply bg-[var(--ca-green-normal)] text-white hover:bg-[#1b673c];
+  }
+
+  .ca-metric-card {
+    @apply bg-white rounded-2xl p-6 shadow-lg border border-[var(--ca-grey-light-active)];
+  }
+
+  .ca-button-primary {
+    @apply bg-[var(--ca-green-normal)] hover:bg-[var(--ca-green-hover)] text-white font-medium px-6 py-3 rounded-lg transition-colors;
+  }
+
+  .ca-button-secondary {
+    @apply bg-[var(--ca-grey-normal)] hover:bg-[var(--ca-grey-dark)] text-white font-medium px-6 py-3 rounded-lg transition-colors;
+  }
+
+  .ca-text-primary {
+    @apply text-[var(--ca-grey-darker)];
+  }
+
+  .ca-text-secondary {
+    @apply text-[var(--ca-grey-dark)];
+  }
+
+  .ca-text-muted {
+    @apply text-[var(--ca-grey-normal)];
+  }
+
+  .ca-bg-light {
+    @apply bg-[var(--ca-grey-light)];
+  }
+
+  .fade-in {
+    @apply opacity-0 translate-y-5 transition-all duration-500 ease-out;
+  }
+
+  .fade-in-visible {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ca-grey-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ca-grey-normal);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ca-grey-dark);
+}

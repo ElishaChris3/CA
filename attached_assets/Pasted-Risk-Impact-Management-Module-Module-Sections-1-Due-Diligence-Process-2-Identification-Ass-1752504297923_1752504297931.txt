@@ -1,0 +1,65 @@
+Risk & Impact Management Module
+Module Sections:
+1.	Due Diligence Process
+2.	Identification & Assessment of Impacts, Risks, Opportunities
+3.	Mitigation, Adaptation, and Action Plans
+4.	Monitoring & Evaluation
+
+1.	Due Diligence Process
+Describe processes for identifying, preventing, mitigating, and tracking sustainability impacts across operations and the value chain.
+Input Form: Due Diligence Overview
+Field	Type	Tooltip	Placeholder
+Due Diligence Framework	Dropdown (multi-select)	Select the frameworks your company follows	UNGPs, OECD Guidelines, ISO 26000, EU Due Diligence Act, ILO Standards, Custom
+Scope of Due Diligence	Multi-line Text	Describe which parts of your operations/value chain are included in your due diligence	"Covers internal operations, Tier-1 suppliers, and logistics partners."
+Governance Oversight	Dropdown	Who is responsible for due diligence?	Sustainability Committee, Legal Dept, ESG Officer, Board, Other
+Process Description	Multi-line Text	Briefly describe how the process is carried out	"We conduct annual supplier audits, grievance mechanisms, and desktop reviews."
+Frequency	Dropdown	How often is due diligence performed?	Ongoing, Annual, Bi-annual, Ad-hoc
+Stakeholder Involvement	Multi-select Dropdown	Which stakeholders are involved in the due diligence process?	Employees, Suppliers, NGOs, Regulators, Customers, Indigenous Communities, Investors
+Grievance Mechanism Available?	Yes/No	Whether a mechanism is available for affected parties	—
+Grievance Mechanism Description	Multi-line Text	Describe how stakeholders can raise concerns	"Online form, hotline, and anonymous reporting system."
+Supporting Documents	File Upload	Upload your due diligence policy or process document	PDF, DOCX, XLSX (max 10MB)
+
+2.	IRO Identification & Assessment
+Describe how impacts, risks, and opportunities are identified, assessed, and prioritized.
+Input Form: IRO Register
+This section is a repeatable table — users can add multiple IROs and score each based on standardized criteria.
+Field	Type	Tooltip	Placeholder
+IRO Type	Dropdown	Choose the type of entry	Actual Impact, Potential Impact, Risk, Opportunity
+Category	Dropdown	Select from E, S, G themes	E1 Climate, S1 Workers, G1 Governance, etc.
+IRO Title	Free-text	Title or name of the risk/impact	"Water Scarcity in Production"
+IRO Description	Multi-line Text	Brief narrative of the issue	"Operations in drought-prone area face reputational risk and water shortages."
+Likelihood (1–5)	Dropdown	How likely is this IRO to occur?	1 = Rare, 5 = Almost Certain
+Severity/Impact Magnitude (1–5)	Dropdown	What is the expected impact?	1 = Negligible, 5 = Catastrophic
+Time Horizon	Dropdown	Time scale of the IRO	Short (<1 yr), Medium (1–5 yrs), Long (>5 yrs)
+Affected Stakeholders	Multi-select Dropdown	Groups affected by this IRO	Workers, Communities, Clients, Regulators, Investors, Suppliers
+Value Chain Location	Dropdown	Where does the IRO occur?	Own Operations, Upstream, Downstream, Entire Chain
+Financial Materiality?	Yes/No	Could this affect financial performance?	—
+Impact Materiality?	Yes/No	Does it have a significant environmental/social impact?	—
+Linked Strategy/Goal	Multi-select	Connect this IRO to any goal already defined	Net-zero 2030, Circular Economy Target, None
+
+3.	Action & Mitigation Plans
+Describe how you respond to each identified IRO (risk, impact, opportunity).
+Input Form: Response Plan (Per IRO)
+Field	Type	Tooltip	Placeholder
+IRO Title (Linked)	Auto-filled	Auto-filled from previous IRO form	—
+Response Type	Dropdown	What type of action is planned?	Avoidance, Mitigation, Remediation, Adaptation, Capitalize (Opportunity), Monitor Only
+Response Description	Multi-line Text	Describe the actions	"Shift operations to less water-stressed region and install recycling systems."
+Target Outcome	Free-text	What outcome do you expect?	"Reduce water use by 30% within 2 years."
+Responsible Department	Dropdown	Who will lead the action?	Ops, Procurement, Sustainability, HR, Legal
+Start Date	Date Picker	Start of the mitigation or adaptation plan	—
+End Date	Date Picker	Expected completion date	—
+Budget (if any)	Numeric with EUR	Budget allocated	100,000 EUR
+
+4️. Monitoring & Evaluation
+ Document how the company tracks IROs and response effectiveness.
+Input Form: IRO Monitoring Tracker
+Field	Type	Tooltip	Placeholder
+IRO Title (Linked)	Auto-filled	From IRO list	—
+Last Reviewed	Date Picker	Most recent assessment or update	—
+Monitoring Method	Dropdown	Type of monitoring used	Site Visit, Internal Audit, ESG Report, External Assurance
+Performance Indicator (KPI)	Free-text	What metric is used to track progress?	"Water withdrawn per unit output (m³/unit)"
+Current Status	Dropdown	Status of the IRO	Emerging, Under Control, Escalated, Resolved
+Supporting Documents	File Upload	Upload evidence or monitoring reports	PDF, XLSX, Images
+
+Dashboard/Output Features
+•	Exportable Summary Table – for audit and report insertion

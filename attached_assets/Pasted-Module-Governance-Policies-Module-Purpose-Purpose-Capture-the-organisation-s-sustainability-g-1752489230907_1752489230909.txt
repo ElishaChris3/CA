@@ -1,0 +1,61 @@
+Module: Governance & Policies
+Module Purpose:
+Purpose: Capture the organisation’s sustainability governance setup, internal ESG policies, incentive mechanisms, decision-making integration, and ESG information flow — in alignment with ESRS GOV-1, GOV-2, GOV-3, GOV-4, SBM-5, and G1.
+________________________________________
+📦 Sub-Modules Overview
+1.	Sustainability Governance Structure
+2.	ESG Policy Register
+3.	ESG-Linked Incentives
+4.	Internal ESG Information Flows
+5.	Integration into Core Business Functions
+________________________________________
+1. 🏛️ Sustainability Governance Structure
+(Expanded from GOV-1 and Topical Standard G1)
+📋 Input Form
+Field	Type	Tooltip	Options
+Board Oversight Mechanism	Dropdown	Select the main entity responsible for ESG oversight at board level.	Full Board, ESG Committee, Risk & Audit Committee, Sustainability Committee, Ethics Committee, Nomination Committee, No Oversight
+Committee Name	Free-text	Enter the official name of the committee responsible for sustainability oversight (if applicable).	—
+Committee Composition	Multi-select Dropdown	Select the roles or members included in the committee.	Board Chair, Independent Directors, CEO, CFO, CSO, Chief Risk Officer, Legal Counsel, Employee Representatives, Investor Relations, Other
+Committee Responsibilities	Multi-select Dropdown	Which sustainability topics does the committee oversee?	Climate Change, Human Rights, Biodiversity, Anti-Corruption, Diversity & Inclusion, Executive Pay, ESG Risks & Opportunities, Stakeholder Engagement, Other
+Reporting Line	Dropdown	Who does this committee report to?	Full Board, CEO, Executive Committee, Supervisory Board, Risk Committee, Other
+Charter / Terms of Reference	File Upload	Upload the formal document defining the committee's scope and duties.	PDF/DOC
+________________________________________
+2. 📜 ESG Policy Register
+(Aligned with GOV-3, G1, and VSME B2)
+📋 Input Form (Repeatable Table)
+Field	Type	Tooltip	Options
+Policy Name	Free-text	Enter the official title of the policy.	—
+Policy Category	Dropdown	Classify the policy based on its thematic scope.	Environmental Policy, Human Rights Policy, Anti-Corruption Policy, Whistleblower Policy, Diversity & Inclusion Policy, Responsible Sourcing Policy, Health & Safety Policy, Code of Conduct, Cybersecurity/Data Ethics, Climate Policy, Conflict of Interest Policy, Other
+Applies To	Multi-select Dropdown	Which entities or parties does the policy apply to?	Entire Organization, Specific Departments, Subsidiaries, Suppliers, Contractors, Joint Ventures, Temporary Staff, Other
+Policy Status	Dropdown	Specify the current development status of the policy.	Draft, Under Internal Review, Board Approved, Publicly Disclosed, Archived
+Date of Last Review	Date Picker	Select the most recent date this policy was reviewed.	—
+Policy Document Upload	File Upload	Attach the policy file for reference (PDF/DOC).	PDF/DOC
+________________________________________
+3. 🎯 ESG-Linked Incentives
+(Aligned with GOV-4 and SBM-5)
+📋 Input Form
+Field	Type	Tooltip	Options
+Are ESG Criteria Used in Executive Compensation?	Yes/No	Is part of variable executive pay tied to sustainability performance?	—
+Applicable Roles	Multi-select Dropdown	Which executive roles have ESG-linked pay components?	CEO, CFO, CSO, COO, Board Members, Senior Executives, Country Heads, Business Unit Leaders, Other
+Linked ESG KPIs	Multi-select Dropdown	Which KPIs are used for ESG incentive calculation?	Scope 1 Emissions Reduction, Scope 2 Emissions Reduction, Scope 3 Targets, Net-Zero Milestones, Gender Diversity Ratio, Employee Safety, Training Hours, Whistleblower Cases Resolved, ESG Ratings (e.g., MSCI, Sustainalytics), EU Taxonomy Alignment, Community Engagement, Customer Satisfaction, Other
+Weight of ESG in Variable Pay	Numeric (%)	Enter the percentage weight of ESG performance in overall variable pay.	—
+Compensation Approval Body	Dropdown	Who approves the incentive structure?	Board of Directors, Compensation Committee, HR Department, Shareholders, CEO, Supervisory Board, Other
+Narrative on ESG Incentives	Multi-line Text	Describe how ESG incentives are structured, assessed, and verified.	Placeholder: "ESG targets are evaluated annually by the compensation committee with external auditor verification."
+________________________________________
+4. 🔁 Internal ESG Information Flows
+(Required by GOV-2)
+📋 Input Form
+Field	Type	Tooltip	Options
+Who Tracks ESG KPIs?	Multi-select Dropdown	Select the departments responsible for monitoring ESG data.	Sustainability Team, Finance Department, Risk & Compliance, Operations, HR, Procurement, CSR Office, ESG Task Force, Third-Party Consultants, Other
+ESG Reporting Frequency (Internal)	Dropdown	How often are ESG metrics shared within the organization?	Daily, Weekly, Monthly, Quarterly, Bi-Annually, Annually, Ad-hoc
+Internal ESG Report Recipients	Multi-select Dropdown	Select the internal audiences for ESG updates.	Board, Executive Committee, Middle Management, Business Unit Heads, Departmental Staff, All Employees, Internal Audit Team, Other
+Formats of ESG Reporting	Multi-select Dropdown	How are ESG reports shared internally?	Dashboard (BI Tools), Excel Reports, PowerPoint Decks, Email Memos, Printed Reports, Town Halls, KPI Scorecards, Intranet Updates, Other
+Narrative Description of ESG Data Flow	Multi-line Text	Explain the flow of ESG information — from collection to internal reporting.	Placeholder: "KPIs are collected monthly by the ESG team and reviewed quarterly by the executive board."
+________________________________________
+5. 🧠 ESG Integration into Core Business Processes
+(GOV-3 requirement for embedding ESG into strategy and execution)
+📋 Input Form
+Field	Type	Tooltip	Options
+Where is ESG Integrated?	Multi-select Dropdown	Select the areas where ESG considerations are embedded.	Budgeting, Procurement, R&D, Product Design, Investment Decision-Making, Risk Management, HR & Training, M&A Activities, Supplier Evaluation, Marketing, Stakeholder Engagement, Legal Compliance, Tax Strategy, Other
+Narrative on ESG Integration	Multi-line Text	Explain how ESG is embedded into decision-making processes.	Placeholder: "Our investment committee uses an ESG due diligence checklist for all new capital expenditures."
+

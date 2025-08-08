@@ -1,0 +1,84 @@
+Carbon Aegis Brand Colors
+Primary Color Palette
+Green (Primary Brand Color):
+
+Normal: #217947 (var(--ca-green-normal-active))
+Hover: #258850 (var(--ca-green-normal-hover))
+Red (Secondary/Accent):
+
+Normal: #e392a1 (var(--CA-Red-Normal))
+Light: #fcf4f6 (var(--CA-Red-Light))
+Light Active: #f6dde2 (var(--ca-red-light-active))
+Neutral Color Palette
+White: #fff (var(--CA-White-White))
+Grey Light: #f4f4f4 (var(--CA-Grey-Light))
+Grey Light Active: #dcdcdc (var(--ca-grey-light-active))
+Grey Light Hover: #dcdcdc (var(--ca-grey-light-hover))
+Grey Normal: #8f8f8f (var(--CA-Grey-Normal))
+Grey Dark: #6b6b6b (var(--CA-Grey-Dark))
+Grey Dark Active: #404040 (var(--ca-grey-dark-active))
+Grey Dark Hover: #565656 (var(--ca-grey-dark-hover))
+Grey Darker: #323232 (var(--CA-Grey-Darker))
+Typography
+Primary Fonts
+Inter: Used for body text, labels, and general content
+
+Import: @import "https://fonts.googleapis.com/css?family=Inter:0,undefined;0,400;0,700;0,500&display=swap"
+Weights: 400 (regular), 500 (medium), 600 (semi-bold), 700 (bold)
+Poppins: Used for headings and emphasis
+
+Import: @import "https://fonts.googleapis.com/css?family=Poppins:0,500&display=swap"
+Weight: 500 (medium)
+Typography Scale
+Large Headings: 40px/48px line-height, Inter 700
+Medium Headings: 26px/30px line-height, Inter 600
+Section Headings: 16px/26px line-height, Poppins 500
+Body Text: 14px/22px line-height, Inter 400
+Labels: 16px/24px line-height, Inter 500
+Small Text: 12px/normal line-height, Inter 500
+UI Components Styling
+Form Elements
+Input Fields:
+
+Border: 1px solid #dcdcdc
+Background: #fff
+Border radius: 8px
+Padding: 9px 15px
+Height: 40px
+Placeholder color: #8f8f8f
+Buttons:
+
+Primary: Background #8f8f8f, white text
+Border radius: 8px
+Padding: 8px 16px 8px 20px
+Font: Poppins 500, 16px/26px
+Layout & Spacing
+Border Radius: 8px (forms), 10px (cards), 16px (main containers)
+Spacing:
+Small gaps: 10px
+Medium gaps: 20px, 30px
+Large gaps: 40px, 50px
+Padding:
+Container padding: 20px, 40px
+Form padding: 9px 15px
+Button padding: 8px 16px
+Cards & Containers
+Background: #fff
+Border: 1px solid #dcdcdc
+Border radius: 8px-16px
+Shadow: 0 1.53px 3.825px #76767633
+Brand Elements
+Logo
+Size: 210px × 39px (standard size)
+Background: Placeholder shows #d3d3d3 with image positioning
+Color Usage Guidelines
+Primary Green: Main brand color, used for primary actions and brand elements
+Secondary Red: Used for accents, progress indicators, and secondary actions
+Greys: Used for text hierarchy, borders, and neutral elements
+White: Primary background color for clean, modern appearance
+Visual Hierarchy
+Primary Text: #323232 (Grey Darker)
+Secondary Text: #6b6b6b (Grey Dark)
+Tertiary Text: #8f8f8f (Grey Normal)
+Accent Text: #217947 (Green Normal Active)
+This comprehensive branding system creates a professional, clean, and environmentally-conscious visual identity that aligns with Carbon Aegis's sustainability focus while maintaining excellent readability and user experience.

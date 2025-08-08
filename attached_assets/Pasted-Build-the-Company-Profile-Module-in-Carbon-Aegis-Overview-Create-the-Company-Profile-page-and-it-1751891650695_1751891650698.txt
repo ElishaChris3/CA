@@ -1,0 +1,126 @@
+Build the “Company Profile” Module in Carbon Aegis
+Overview:
+
+Create the Company Profile page and its sub-modules for the onboarding and ESG disclosure tool "Carbon Aegis".
+This module defines the legal identity, operational scope, business model, and sector classification of the company.
+
+✅ Main Module: Company Profile
+Purpose: Define Legal Identity, Operational Scope, Business Model, and Sector Classification.
+
+Include the following sub-modules, each with its own input forms, validation rules, repeatable fields, file uploads, and tooltips — all based on the specifications below.
+
+🔹 Sub-Module 1: Entity Scope & Reporting
+Implement a form to capture:
+
+Legal Name (Free-text)
+
+Legal Form (Dropdown: LLC, PLC, etc.)
+
+Registered Address (Free-text)
+
+Country (Dropdown)
+
+NACE Sector Code (Dropdown)
+
+Fiscal Year-End (Date Picker)
+
+Subsidiary List (Repeatable form with fields for Name, Country, Address, Ownership %, Legal Form, Relation to Parent)
+
+Include:
+
+UI buttons/placeholders for “Import from Excel” and “Connect via API” (do not implement backend logic)
+
+Field labels in EN/DE
+
+Inline validation for required fields
+
+🔹 Sub-Module 2: Corporate Structure
+Capture details on:
+
+Parent Company (Free-text)
+
+Ownership Structure (Repeatable table: Entity Name, Role, Ownership %)
+
+File Upload: Ownership Chart (Excel)
+
+Include:
+
+Import button only for Excel ownership chart (no logic yet)
+
+Localized field labels and repeatable table input
+
+🔹 Sub-Module 3: Business Model Description
+Form sections:
+
+Key Products/Services (Multi-select Dropdown + Free-text for “Other”)
+
+Primary Markets (Multi-select Dropdown + Free-text)
+
+Supply Chain Description (Multi-line Text)
+
+Support narrative-style input and localization.
+
+🔹 Sub-Module 4: Industry and Taxonomy Classification
+Required inputs:
+
+Industry Code (Dropdown)
+
+EU Taxonomy Eligibility (Checkbox with optional free-text for “Partially Aligned”)
+
+Activity Description (Multi-line)
+
+Sector Classification (Dropdown)
+
+Sustainability Classification (Dropdown)
+
+🔹 Sub-Module 5: Geography and Locations
+Capture:
+
+Countries of Operation (Multi-select Dropdown)
+
+Registered HQ (Free-text)
+
+Number of Production Sites (Numeric)
+
+Site Locations (Free-text)
+
+Market Regions (Dropdown)
+
+Geolocation per site (Map interface or coordinate fields)
+
+Add Excel import button only — no logic for importing location list at this stage
+
+🔹 Sub-Module 6: Business Strategy & Initiatives
+Multi-step form to capture:
+
+Sustainability Policies (Multi-line)
+
+Net-Zero Target (Numeric + Date Picker)
+
+Circular Economy Initiatives (Text)
+
+Upload: Transition Plan (PDF/Word)
+
+Sustainability Initiatives (Repeatable table)
+
+Governance Oversight (Dropdown + Description)
+
+Sustainability KPIs (Repeatable table)
+
+Transition Updates (Multi-line)
+
+🛠️ Technical Notes
+Do NOT implement Excel or API import logic yet.
+
+Include placeholder buttons with labels like:
+
+“Import from Excel”
+
+“Connect to API”
+
+“Upload Template”
+
+All forms should include tooltips, inline validation, and be responsive.
+
+Field labels and dropdowns should support both English and German.
+

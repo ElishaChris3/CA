@@ -1,0 +1,57 @@
+Module Structure:
+
+- **Three collapsible sections**:
+  1. **Environment (E)**
+  2. **Social (S)**
+  3. **Governance (G)**
+
+- Each section expands to reveal **ESRS-aligned topics**. When a topic is selected, a structured input form appears for entering relevant KPIs and metadata.
+
+---
+
+### 📘 Topics & KPIs:
+
+Each ESG section must contain a list of disclosure topics (as per ESRS) and their respective KPIs. Use the following structure for each KPI:
+
+#### Example for a KPI like "Scope 1 GHG Emissions":
+
+- **KPI Name**: Auto-filled dropdown
+- **Metric Type**: Dropdown → [Quantitative, Qualitative, Monetary, Ratio]
+- **Unit of Measure**: Dropdown → [tCO₂e, kWh, %, EUR, Count, etc.]
+- **Reference Standard**: Multi-select → [GHG Protocol, ISO 14064, EU Taxonomy, Custom]
+- **Baseline Year**: Date picker
+
+#### Additional Metadata Fields:
+
+- **Data Owner / Provider**: Dropdown → [Sustainability Officer, HR, Finance, Legal, External Consultant]
+- **Source Type**: Multi-select → [ERP, Utility Bill, Sensor, Supplier Report, HRIS, Manual]
+- **Collection Frequency**: Dropdown → [Real-time, Monthly, Quarterly, Annually]
+- **Collection Method**: Dropdown → [Manual Entry, Excel Upload, API Integration, Survey Tool]
+- **Assurance Level**: Dropdown → [None, Limited, Reasonable, Third-Party Certified]
+- **Verification Status**: Dropdown → [Not Verified, Internally Reviewed, Third-Party Verified]
+- **Confidentiality Level**: Dropdown → [Public, Internal Only, Management Restricted]
+- **Supporting File Upload**: File input for CSV, XLSX, or PDF
+
+---
+
+### 🧭 Navigation & UI Behavior:
+
+- When the user clicks **Environment / Social / Governance**, the corresponding disclosure topics are shown.
+- Selecting a topic (e.g., E1 – Climate Change) shows a list of pre-defined KPIs.
+- For each KPI, an input form should appear with all fields mentioned above.
+- Users can:
+  - **Add New KPI**
+  - **Edit Existing KPI**
+  - **Delete KPI**
+  - **Upload supporting documentation**
+  - See **status indicators** (e.g., Verified / Missing Data / Outdated)
+
+---
+
+### 🗃️ Output Features:
+
+- **Table/List View** of all entered KPIs with filters by:
+  - ESG section
+  - Topic
+  - Verification status
+  - Last updated

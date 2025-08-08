@@ -1,0 +1,71 @@
+Build Scope 1 & Scope 2 GHG Calculator Forms
+Build a GHG Emissions Calculator. When the user clicks on add emission data button on emission overview module, it should show forms for different scopes and categories inputs. The calculator should cover Scope 1 and Scope 2 emission sources as defined in the UK Government GHG Conversion Factors Flat File.
+Build input forms with dropdown menus and input fields based on the hierarchy. I am providing the first 2 forms, will provide rest of the forms later.
+________________________________________
+SCOPE 1: Direct Emissions
+1.1 Stationary Combustion - Fuel
+•	Fuel Type (Dropdown):
+o	Gaseous Fuels
+o	Liquid Fuels
+o	Solid Fuels
+•	Fuel Sub-Type (Dropdown based on Fuel Type):
+o	Gaseous Fuels → Aviation spirit, Aviation turbine fuel, Burning oil, Diesel (average biofuel blend), Diesel (100% mineral diesel), Fuel oil, Gas oil, Lubricants, Naphtha, Petrol (average biofuel blend), Petrol (100% mineral petrol), Processed fuel oils - residual oil, Processed fuel oils - distillate oil, Refinery miscellaneous, Waste oils, Marine gas oil, Marine fuel oil
+o	Liquid Fuels → Butane, CNG, LNG, LPG, Natural gas, Natural gas (100% mineral blend), Other petroleum gas, Propane
+o	Solid Fuels → Coal (industrial), Coal (electricity generation), Coal (domestic), Coking coal, Petroleum coke, Coal (electricity generation - home produced coal only)
+•	Unit of Consumption (Dropdown):
+o	Gaseous Fuels → tonnes, kWh (Net CV), kWh (Gross CV)
+o	Liquid Fuels → tonnes, kWh (Net CV), kWh (Gross CV), litres
+o	Solid Fuels → tonnes, kWh (Net CV), kWh (Gross CV)
+•	Quantity (Numeric Input)
+1.2. Stationary Combustion – Bioenergy
+•	Bioenergy Type (Dropdown):
+o	Biofuel
+o	Biomass
+o	Biogas
+•	Bioenergy Sub-Type (Dropdown based on Bioenergy Type):
+o	Biofuel →
+Bioethanol,
+Biodiesel ME,
+Biodiesel ME (from used cooking oil),
+Biodiesel ME (from tallow),
+Biodiesel HVO,
+Biopropane,
+Development diesel,
+Development petrol,
+Off road biodiesel,
+Biomethane (compressed),
+Biomethane (liquified),
+Methanol (bio),
+Avtur (renewable)
+o	Biomass →
+Wood logs,
+Wood chips,
+Wood pellets,
+Grass/straw
+o	Biogas →
+Biogas,
+Landfill gas
+•	Unit of Consumption (Dropdown based on Sub-Type availability):
+o	Bioethanol → litres, GJ, kg
+o	Biodiesel ME → litres, GJ, kg
+o	Biodiesel ME (from used cooking oil) → litres, GJ, kg
+o	Biodiesel ME (from tallow) → litres, GJ, kg
+o	Biodiesel HVO → litres, GJ, kg
+o	Biopropane → litres, GJ, kg
+o	Development diesel → litres, GJ, kg
+o	Development petrol → litres, GJ, kg
+o	Off road biodiesel → litres, GJ, kg
+o	Biomethane (compressed) → litres, GJ, kg
+o	Biomethane (liquified) → litres, GJ, kg
+o	Methanol (bio) → litres, GJ, kg
+o	Avtur (renewable) → litres, GJ, kg
+o	Wood logs → tonnes, kWh
+o	Wood chips → tonnes, kWh
+o	Wood pellets → tonnes, kWh
+o	Grass/straw → tonnes, kWh
+o	Biogas → tonnes, kWh
+o	Landfill gas → tonnes, kWh
+
+•	Quantity (Numeric Input):
+Input field for user to enter the amount of fuel used.
+o	Tooltip: “Enter the quantity of fuel consumed using the selected unit.”

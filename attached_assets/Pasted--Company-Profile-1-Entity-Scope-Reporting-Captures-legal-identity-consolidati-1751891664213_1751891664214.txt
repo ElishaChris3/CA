@@ -1,0 +1,244 @@
+# Company Profile
+
+1. **Entity Scope & Reporting**
+    
+    Captures legal identity, consolidation scope (individual vs group), and reporting basis. Includes selection of Basic vs Comprehensive module (as per VSME B1) and listing of subsidiaries with registered addresses. *Mapping:* ESRS 1/2 require disclosure of organizational context; VSME B1 covers reporting scope and consolidation (basic vs consolidated reporting, lists subsidiaries). *Inputs:* Free-text (legal name, legal form, addresses), dropdowns (country, NACE sector), date picker (fiscal year end), and file upload (company registration document). *Entry Mode:* Manual entry for few companies (with inline data validation), plus bulk Excel import or API for large groups. *Templates:* Pre-built Excel template for subsidiary lists and reporting scope. *Localization:* All field labels (e.g. “country”, “legal form”) and dropdowns in English/German.
+    
+    **Data for Figma:**
+    
+    **Purpose**: Define the legal identity, consolidation scope, and reporting basis. 
+    
+    ### **Input Form**
+    
+    - **Legal Name**
+        - Input Type: Free-text
+        - Tooltip: *"Enter the official legal name of the entity. This is required to establish a unique identity for compliance reporting."*
+    - **Legal Form**
+        - Input Type: Dropdown
+        - Options: LLC, PLC, Sole Proprietorship, Partnership, Other
+        - Tooltip: *"Select the legal structure of the entity to align with regulatory frameworks."*
+    - **Registered Address**
+        - Input Type: Free-text
+        - Tooltip: *"Provide the official registered address of the company for consolidation purposes."*
+    - **Country**
+        - Input Type: Dropdown
+        - Options: Country list
+        - Tooltip: *"Select the country where the company is registered to ensure localization accuracy."*
+    - **NACE Sector Code**
+        - Input Type: Dropdown
+        - Options: Pre-defined NACE codes
+        - Tooltip: *"Choose the NACE code that represents the primary industry of the company. This aligns with EU Taxonomy classifications."*
+    - **Fiscal Year-End**
+        - Input Type: Date picker
+        - Tooltip: *"Specify the fiscal year-end to synchronize reporting timelines."*
+    - **Subsidiary List**
+        - **Subsidiary Name**
+            - Input Type: Free-text
+            - Tooltip: *"Enter the name of the subsidiary to include in the consolidation scope."*
+        - **Country of Registration**
+            - Input Type: Dropdown
+            - Options: Full list of countries
+            - Tooltip: *"Select the country where the subsidiary is legally registered."*
+        - **Address**
+            - Input Type: Free-text
+            - Tooltip: *"Provide the registered address of the subsidiary for compliance purposes."*
+        - **Ownership Percentage**
+            - Input Type: Numeric
+            - Tooltip: *"Specify the ownership percentage of this subsidiary to clarify its role in the group structure."*
+        - **Legal Form**
+            - Input Type: Dropdown
+            - Options: LLC, PLC, Sole Proprietorship, Partnership, Other
+            - Tooltip: *"Select the legal form of the subsidiary to ensure alignment with reporting requirements."*
+        - **Relation to Parent Company**
+            - Input Type: Dropdown
+            - Options: Fully Owned, Majority Owned, Minority Owned
+            - Tooltip: *"Indicate the relationship of this subsidiary to the parent company for hierarchy definition."*
+        
+        ### **Entry Mode**
+        
+        - Repeatable Section for subsidiaries:
+            
+            Users can add multiple entries using a “+ Add Another Subsidiary” button to dynamically expand the form.
+            
+    
+2. **Corporate Structure**
+Defines ownership and group structure. Sub-module to enter parent company, list of shareholders/ownership percentages, and entity hierarchy. *Mapping:* Supports ESRS disclosures on ownership and governance; VSME B1 implicitly covers group (subsidiaries) and individual reporting. *Inputs:* Repeatable sections (e.g. table) for each entity name, relation (parent/child), and ownership share. Use dropdowns for entity roles and free text for names. *Entry Mode:* Manual plus Excel import of chart of subsidiaries. *Templates:* Standard chart-of-accounts-style import format. *Localization:* Field labels and option lists (e.g. “parent company”) in EN/DE.
+    
+    **Data for Figma:**
+    
+    **Purpose**: Document ownership structure, parent entities, and shareholder details.
+    
+    ### **Input Form**
+    
+    - **Parent Company**
+        - Input Type: Free-text
+        - Tooltip: *"Enter the name of the parent company if applicable. This clarifies ownership relationships."*
+    - **Ownership Structure**
+        - Input Type: Repeatable table
+        - Columns:
+            - Entity Name (Free-text)
+            - Role (Choose from Dropdown: Parent, Subsidiary, Shareholder)
+            - Ownership Percentage (Numeric)
+        - Tooltip: *"Define the ownership structure, including parent companies, subsidiaries, and key shareholders."*
+    - **Ownership Chart Upload**
+        - Input Type: File upload (Excel)
+        - Tooltip: *"Upload an ownership chart for detailed governance documentation."*
+3. **Business Model Description**
+Documents the company’s products, services, and value chain. Captures significant offerings, primary markets, supply chains, and value-creation processes. *Mapping:* Aligns with ESRS 2 (SBM-1) which requires describing key products/services and value chain. VSME C1 similarly asks for “significant groups of products and/or services offered” and key markets. *Inputs:* Structured text fields or rich-text for narrative, plus picklists (e.g. product categories). *Entry Mode:* Manual text entry or upload of an existing description. *Templates:* Text templates for company overview. *Localization:* Narrative template and UI in EN/DE; support bilingual text if needed.
+    
+    **Data for Figma:**
+    
+    **Purpose**: Describe the company’s products, services, and value chain.
+    
+    ### **Input Form**
+    
+    1. **Key Products/Services**
+        - **Input Type**: Dropdown (multiple selection)
+        - **Options**:
+            - Manufacturing (e.g., Automotive, Electronics, Machinery)
+            - Retail (e.g., Apparel, Consumer Goods, E-commerce)
+            - Energy (e.g., Renewable Energy, Fossil Fuels, Utilities)
+            - Technology (e.g., Software, Hardware, IT Services)
+            - Healthcare (e.g., Pharmaceuticals, Biotechnology, Medical Devices)
+            - Agriculture (e.g., Farming, Food Processing, Forestry)
+            - Construction (e.g., Infrastructure, Real Estate Development)
+            - Financial Services (e.g., Banking, Insurance, Investments)
+            - Education (e.g., Academic Institutions, Training Services)
+            - Transportation & Logistics (e.g., Freight, Shipping, Public Transport)
+            - Other (with free-text field)
+        - **Tooltip**: *"Select the company's primary products or services from the list. If not listed, choose 'Other' and specify in the provided field."*
+    2. **Primary Markets**
+        - **Input Type**: Dropdown (multiple selection)
+        - **Options**:
+            - Domestic
+            - Regional
+            - International
+            - Other (with free-text field)
+        - **Tooltip**: *"Indicate where the company operates its primary markets to map its geographic footprint. Select 'Other' to specify any additional market categories."*
+    3. **Supply Chain Description**
+        - **Input Type**: Multi-line text
+        - **Tooltip**: *"Describe key elements of the supply chain, including major suppliers and logistics networks."*
+
+1. **Industry and Taxonomy Classification**
+Records industry codes and sustainability classifications. Includes NACE/NAICS code, and flags for EU Taxonomy-eligible activities. *Mapping:* ESRS requires classification by sector; VSME B1 asks for “NACE sector code” *Inputs:* Dropdown (or code selector) for sector; checkboxes for taxonomy eligibility. *Entry Mode:* Manual selection; bulk via Excel for coded data; potential API integration to classification services. *Templates:* Pre-defined lists of common codes. *Localization:* Code descriptions in local language.
+    
+    **Data for Figma:**
+    
+    **Purpose**: Record industry codes and sustainability classifications, ensuring alignment with EU Taxonomy-eligible activities.
+    
+    ### **Input Form**
+    
+    1. **Industry Code (NACE/NAICS)**
+        - **Input Type**: Dropdown (predefined NACE/NAICS codes)
+        - **Options**: Pre-defined codes for various sectors (e.g., manufacturing, retail, energy, etc.)
+        - **Tooltip**: *"Select the appropriate industry code from the predefined list based on your company’s primary sector. This is required for ESRS and EU Taxonomy compliance."*
+    2. **EU Taxonomy Eligibility**
+        - **Input Type**: Checkbox
+        - **Options**:
+            - **Yes**
+            - **No**
+            - **Partially Aligned** (with free-text field for details)
+        - **Tooltip**: *"Check if the company's activities align with the EU Taxonomy for sustainable business. If partial, provide further details in the provided field."*
+    3. **Taxonomy Activity Description**
+        - **Input Type**: Multi-line text
+        - **Tooltip**: *"Provide a brief description of the company's alignment with the EU Taxonomy. Explain which activities are considered sustainable and why."*
+    4. **Sector Classification**
+        - **Input Type**: Dropdown (sector options such as agriculture, energy, manufacturing, technology, etc.)
+        - **Tooltip**: *"Choose the sector classification that best matches the company's business operations. This helps in regulatory and compliance reporting."*
+    5. **Sustainability Classification**
+        - **Input Type**: Dropdown (options for sustainability classification)
+        - **Options**:
+            - **Sustainable**
+            - **Non-Sustainable**
+            - **Partially Sustainable**
+        - **Tooltip**: *"Select the sustainability classification that applies to the company's overall activities based on their environmental impact."*
+2. **Geography and Locations**
+Lists countries of operation and key site locations. Captures registered HQ, production sites, and geographic market regions. *Mapping:* ESRS requires breakdown of revenue by geography (EU Directive Art.18); VSME B1 asks for “country of primary operations” and site geolocations. *Inputs:* Free-text or dropdown for country, numeric for number of locations, map coordinate input. *Entry Mode:* Manual or Excel import of location lists. *Templates:* Geographic footprint template. *Localization:* Country names and region labels in EN/DE.
+    
+    **Data for Figma:**
+    
+    **Purpose**: List countries of operation and key site locations, capturing registered HQ, production sites, and geographic market regions.
+    
+    ### **Input Form**
+    
+    1. **Countries of Operation**
+        - **Input Type**: Dropdown (multi-selection)
+        - **Options**: Full list of countries (e.g., Germany, France, USA, UK, etc.)
+        - **Tooltip**: *"Select all the countries where your company operates. This helps in understanding the geographic spread of your operations."*
+    2. **Registered HQ Location**
+        - **Input Type**: Free-text
+        - **Tooltip**: *"Enter the main headquarters address where your company is registered."*
+    3. **Number of Production Sites**
+        - **Input Type**: Numeric
+        - **Tooltip**: *"Enter the number of production sites your company operates in each country."*
+    4. **Production Site Locations**
+        - **Input Type**: Text for each production site
+        - **Tooltip**: *"List the addresses or cities of your company’s production sites. Include key regions or plants."*
+    5. **Geographic Market Regions**
+        - **Input Type**: Dropdown (multi-selection)
+        - **Options**:
+            - **Domestic**
+            - **Regional**
+            - **International**
+            - **Other** (free-text)
+        - **Tooltip**: *"Select the geographic market regions where your company primarily operates and markets its products/services."*
+        1. **Site Geolocation (Coordinates)**
+        - **Input Type**: Map interface with coordinate input
+        - **Tooltip**: *"For each production site, input the geolocation (latitude/longitude) or use the map interface to pinpoint the site’s location."*
+3. **Business Strategy and Initiatives**
+Captures strategic ESG initiatives and future plans. Includes sustainability policies or transition plans (e.g. net-zero target, product stewardship). *Mapping:* ESRS 2 requires explaining how strategy addresses sustainability (SBM-1 to SBM-3). VSME has B2 (policies and initiatives) and C2 (plans) for transition strategies. *Inputs:* Multi-line text for policies, yes/no checkboxes for existence of initiatives, date fields for target years. *Entry Mode:* Manual entry; can import structured plan elements via API. *Templates:* Standard policy and targets form (e.g. “list of ESG goals”). *Localization:* Policy names and descriptions in EN/DE.
+    
+    **Data for Figma:**
+    
+    **Purpose**: Capture the company’s strategic ESG initiatives, sustainability policies, and transition plans for sustainability goals.
+    
+    ### **Input Form**
+    
+    1. **Sustainability Policies Overview**
+        - **Input Type**: Multi-line text (max. 500 words)
+        - **Tooltip**: *"Provide a brief description of your company’s sustainability policies. Include key areas such as environmental, social, and governance (ESG) policies and any overarching sustainability frameworks your company adheres to."*
+        - **Placeholder Text**: *"Example: Our company is committed to reducing its carbon footprint, following ISO 14001, and ensuring ethical labor practices across all markets."*
+    2. **Net-Zero Emissions Target**
+        - **Input Type**: Numeric (Percentage reduction target), Date picker (Target year)
+        - **Tooltip**: *"Enter your company’s target for reducing carbon emissions by a specific percentage (e.g., 50% reduction by 2030). This aligns with your net-zero strategy."*
+        - **Example**: *"Example: 50% reduction by 2030, 100% reduction by 2050."*
+    3. **Product Stewardship and Circular Economy Initiatives**
+        - **Input Type**: Multi-line text (max. 300 words)
+        - **Tooltip**: *"Describe your company’s efforts in product stewardship, including actions related to product design, recycling, reusing, and reducing waste. Focus on circular economy initiatives."*
+        - **Placeholder Text**: *"Example: We have introduced a take-back program for our products and are focusing on designing for disassembly and reuse."*
+    4. **Sustainability Transition Plan**
+        - **Input Type**: File Upload (PDF/Word, max size: 5MB)
+        - **Tooltip**: *"Upload your company's formal transition plan or roadmap that outlines how you intend to achieve sustainability targets, such as carbon neutrality, sustainable sourcing, or eco-friendly practices."*
+        - **Template Suggestion**: *"Include a roadmap with key milestones and specific goals for 2025, 2030, and beyond."*
+    5. **Ongoing and Planned Sustainability Initiatives**
+        - **Input Type**: Repeatable Table
+        - **Columns**:
+            - **Initiative Name** (Free-text)
+            - **Initiative Description** (Multi-line text)
+            - **Start Date** (Date picker)
+            - **End Date** (Date picker)
+            - **Current Status** (Dropdown: Planned, Ongoing, Completed)
+            - **Target Impact (if applicable)** (Numeric percentage or financial value)
+        - **Tooltip**: *"Document the key sustainability initiatives you are currently working on or planning to implement. This includes goals, timelines, and the expected impact."*
+        - **Example**: *"Initiative Name: Solar Panel Installation, Target Impact: 20% reduction in energy consumption by 2025."*
+    6. **Governance and Oversight of Sustainability Initiatives**
+        - **Input Type**: Dropdown (Select role), Multi-line text for governance explanation
+        - **Options**:
+            - **Board-Level Oversight** (Executive-level, Sustainability Committee)
+            - **Department-Level Oversight** (e.g., Sustainability Officer, Environmental Impact Team)
+            - Other
+        - **Tooltip**: *"Who in your organization oversees sustainability initiatives? Describe the role of the board or executives, and how sustainability is integrated into decision-making."*
+        - **Example**: *"The Board of Directors oversees sustainability initiatives, and a dedicated Sustainability Officer manages day-to-day operations."*
+    7. **Sustainability Goals and Key Performance Indicators (KPIs)**
+        - **Input Type**: Table (Repeatable, max. 5 goals)
+            - **Goal Title** (Free-text)
+            - **Goal Description** (Multi-line text)
+            - **Target Date** (Date picker)
+            - **Current Progress** (Numeric or percentage)
+            - **KPIs/Indicators** (Free-text or dropdown options for KPIs like emissions reduction, energy savings, waste recycling, etc.)
+        - **Tooltip**: *"Define your major sustainability goals and their related KPIs. These should be measurable, time-bound, and aligned with your long-term sustainability vision."*
+        - **Example**: *"Goal Title: Achieve carbon neutrality by 2030. KPI: 30% reduction in Scope 1 emissions by 2025."*
+    8. **Sustainability Transition Plan Updates and Milestones**
+        - **Input Type**: Multi-line text (max. 500 words)
+        - **Tooltip**: *"Describe key updates on your sustainability transition, including progress made towards set goals, changes in targets, and any new sustainability initiatives introduced."*
+        - **Example**: *"We have achieved a 10% reduction in Scope 1 emissions in the last year and are on track for our 2025 energy efficiency targets."*

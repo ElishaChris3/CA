@@ -1,0 +1,153 @@
+Carbon Aegis Overview
+Carbon Aegis is a comprehensive Sustainability Reporting SaaS platform designed to help organizations comply with the growing regulatory demands for Environmental, Social, and Governance (ESG) disclosures. The platform is specifically tailored for companies in need of CSRD/ESRS compliance but is flexible enough to serve businesses across industries, providing a scalable solution for Greenhouse Gas (GHG) emissions accounting, double materiality assessments, and report generation aligned with the European Union's ESRS framework.
+
+Carbon Aegis aims to simplify the complex world of sustainability reporting through automation, centralized data management, and user-friendly interfaces, enabling companies to reduce manual effort, ensure compliance, and present data in the required formats.
+
+Key Features of Carbon Aegis
+ESRS and CSRD Compliance:
+
+Enables organizations to meet the ESRS (European Sustainability Reporting Standards) and CSRD (Corporate Sustainability Reporting Directive) by providing structured templates, automated reporting, and regulatory guidance.
+
+Greenhouse Gas (GHG) Accounting:
+
+Users can input data for Scope 1, 2, and 3 emissions with integrated emission factors for automatic calculation, tracking, and reporting.
+
+Double Materiality Assessment (DMA):
+
+Users can assess both the financial materiality and impact materiality of various ESG topics, helping them identify what disclosures to report based on their business' sustainability risks.
+
+Modular Design:
+
+The platform is built with a modular design that allows users to choose the relevant modules for their needs, such as GHG Accounting, ESRS Reporting, VSME (for small- and medium-sized enterprises), and Stakeholder Engagement.
+
+Real-Time Collaboration:
+
+Carbon Aegis integrates with Notion to allow for real-time collaboration across teams, keeping all relevant stakeholders on the same page and managing their tasks and deliverables efficiently.
+
+Data Ingestion:
+
+Flexible data ingestion options support manual entry, bulk Excel imports, and API integrations with other enterprise systems, ensuring that data can be easily collected, validated, and standardized for reporting.
+
+Reporting and Document Generation:
+
+Carbon Aegis can automatically generate ESRS-compliant reports in Word, PDF, and Excel formats, allowing users to easily export and integrate their reports into their annual reports or investor disclosures.
+
+VSME (Very Small and Medium Enterprises) Module:
+
+Specialized support for SMEs to ensure they can meet regulatory demands without complexity, offering easy-to-use templates and checklists aligned with EFRAG’s (European Financial Reporting Advisory Group) VSME standards.
+
+Role-Based Access Control (RBAC):
+
+The platform supports role-based access control, where consultants can manage multiple clients, and clients can have access to their own subsidiaries, departments, or stakeholders while ensuring data segregation and security.
+
+Audit Trail and Versioning:
+
+Tracks every change made to the data and the reports, ensuring full auditability of ESG reports, which can be easily reviewed by stakeholders or auditors.
+
+Core Modules in Carbon Aegis
+Organizational Profile and Business Model:
+
+Entity Scope & Reporting: Captures legal identity, reporting scope (individual or group), and subsidiary details for compliance.
+
+Corporate Structure: Defines ownership, shareholder relationships, and group structure for governance transparency.
+
+Business Model Description: Documents the company's products, services, and value chain for ESRS disclosures.
+
+Industry and Taxonomy Classification: Provides sector classification (e.g., NACE) and EU Taxonomy alignment.
+
+Governance and Policies:
+
+Board and Management Structure: Tracks governance bodies, board roles, ESG officer assignments, and committee involvement.
+
+ESG Policies & Codes: Manages internal policies (e.g., Code of Conduct, anti-corruption, environmental management) for compliance.
+
+Compliance & Controls: Tracks risk management, compliance programs, and due diligence procedures.
+
+Incentives and Remuneration: Monitors ESG-linked executive compensation and reward structures.
+
+Risks & Opportunities:
+
+Risk Identification & Assessment: Identifies sustainability-related risks and records impact and mitigation actions.
+
+Opportunities Catalog: Tracks positive sustainability opportunities (e.g., new green products, energy savings).
+
+Climate Risks: Dedicated tracking of physical and transition climate-related risks aligned with TCFD (Task Force on Climate-Related Financial Disclosures).
+
+Stakeholder Engagement:
+
+Stakeholder Registry: Allows users to define and categorize stakeholders (employees, suppliers, customers, etc.).
+
+Survey Design & Collection: Supports creating custom surveys to gather stakeholder feedback on materiality and ESG topics.
+
+Survey Analysis: Visualizes survey results to highlight priorities and trends for further action.
+
+ESG Data Collection:
+
+Energy & GHG Emissions: Tracks and calculates GHG emissions based on energy consumption, fuel use, and carbon factors.
+
+Pollution: Records air, water, soil, and other pollution metrics.
+
+Water Usage: Captures water consumption, withdrawals, and discharges.
+
+Waste & Circularity: Monitors material inputs and outputs, recycling rates, and waste management practices.
+
+Biodiversity: Tracks land use, conservation measures, and biodiversity impacts from operations.
+
+Materiality Assessment:
+
+Topic Identification: Users can identify relevant ESG topics from predefined lists based on ESRS 11 themes and sub-themes (e.g., Climate Change, Pollution, Water Usage).
+
+Impact & Financial Materiality Scoring: A rating system that allows users to score topics on their impact and financial materiality.
+
+Materiality Matrix: Visualizes the relationship between impact and financial materiality for each topic to identify what is material for reporting.
+
+VSME (Very Small and Medium Enterprises):
+
+A simplified module with pre-loaded disclosures to help small and medium-sized businesses comply with EFRAG standards.
+
+Includes sections for energy, water, health & safety, and governance metrics that align with the EU Taxonomy for SMEs.
+
+ESRS Reporting & Disclosure:
+
+General Information Capture: Collects general company information (e.g., business model, strategy, governance) for reporting.
+
+Pre-built Templates: Provides pre-configured templates for each ESRS section to streamline reporting.
+
+Compliance Checking: Ensures that all required disclosures are addressed.
+
+XBRL Tagging & Export: Supports digital tagging of ESG metrics for compliance with ESEF and XBRL reporting standards.
+
+Key Technology Stack
+Frontend:
+
+React (for user interface)
+
+Next.js (for server-side rendering)
+
+Material UI (for modern, responsive design)
+
+Chart.js / D3.js (for visualizing ESG data and reports)
+
+Backend:
+
+Node.js (for server-side logic)
+
+Express.js (for building REST APIs)
+
+PostgreSQL (for relational data storage)
+
+Redis (for caching and performance optimization)
+
+Data Ingestion:
+
+APIs (for automated data fetching)
+
+Excel / CSV Uploads (for bulk data import)
+
+Manual Data Entry (for smaller data inputs)
+
+Security & Authentication:
+
+OAuth 2.0 / JWT (for secure authentication)
+
+Role-based Access Control (RBAC) (to manage user permissions and data access)

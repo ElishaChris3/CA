@@ -1,0 +1,86 @@
+1.3. Mobile Combustion – Passenger Vehicles
+•	Vehicle Category (Dropdown):
+o	Cars (by market segment)
+o	Cars (by size)
+o	Motorbike
+•	Vehicle Sub-Category (Dropdown based on Vehicle Category):
+o	Cars (by market segment) →
+Mini, Supermini, Lower medium, Upper medium, Executive, Luxury, Sports, Dual purpose 4X4, MPV
+o	Cars (by size) →
+Small car, Medium car, Large car, Average car
+o	Motorbike →
+Small, Medium, Large, Average
+•	Fuel Type (Dropdown based on Sub-Category availability):
+o	Diesel
+o	Petrol
+o	Hybrid
+o	Plug-in Hybrid Electric Vehicle
+o	Battery Electric Vehicle
+o	Unknown
+o	CNG
+o	LPG
+•	Distance Unit (Dropdown):
+o	km
+o	miles
+•	Distance Travelled (Numeric Input):
+o	Tooltip: "Enter the number of kilometers or miles driven."
+1.4. Mobile Combustion – Delivery Vehicles
+• Vehicle Category (Dropdown):
+•	Vans
+•	Heavy Goods Vehicles (HGVs) – Rigid
+•	Heavy Goods Vehicles (HGVs) – Articulated
+•	Refrigerated HGVs – Rigid
+•	Refrigerated HGVs – Articulated
+•	All Vans (Average)
+•	All HGVs (Average)
+•	All Refrigerated HGVs (Average)
+• Vehicle Sub-Category (Dropdown based on Vehicle Category):
+•	Vans →
+o	Class I (up to 1.305 tonnes)
+o	Class II (1.305 to 1.74 tonnes)
+o	Class III (1.74 to 3.5 tonnes)
+o	Average (up to 3.5 tonnes)
+•	HGVs – Rigid →
+o	3.5 – 7.5 tonnes
+o	7.5 – 17 tonnes
+o	17 tonnes
+o	All rigids (Average)
+•	HGVs – Articulated →
+o	3.5 – 33 tonnes
+o	33 tonnes
+o	All artics (Average)
+•	Refrigerated HGVs – Rigid →
+o	3.5 – 7.5 tonnes
+o	7.5 – 17 tonnes
+o	17 tonnes
+o	All rigids (Average)
+•	Refrigerated HGVs – Articulated →
+o	3.5 – 33 tonnes
+o	33 tonnes
+o	All artics (Average)
+• Fuel Load / Laden Weight (Dropdown – only shown for HGV and Refrigerated HGV categories):
+•	0% Laden
+•	50% Laden
+•	100% Laden
+•	Average laden
+• Fuel Type (Dropdown – only shown for van):
+•	Diesel
+•	Petrol
+•	Plug-in Hybrid Electric Vehicle
+•	Battery Electric Vehicle
+•	Hybrid
+•	CNG
+•	LPG
+•	Unknown
+• Distance Unit (Dropdown):
+•	km
+•	miles
+• Distance Travelled (Numeric Input):
+•	Tooltip: "Enter the number of kilometers or miles driven."
+1.5. Fugitive Emissions – Refrigerants
+• Refrigerant Name (Dropdown):
+(dropdown items below – full list will be auto-populated)
+Carbon dioxide, Methane, Nitrous oxide, HFC-23, HFC-32, HFC-41, HFC-125, HFC-134, HFC-134a, HFC-143, HFC-143a, HFC-152a, HFC-227ea, HFC-236fa, HFC-245fa, HFC-43-I0mee, Perfluoromethane (PFC-14), Perfluoroethane (PFC-116), Perfluoropropane (PFC-218), Perfluorocyclobutane (PFC-318), Perfluorobutane (PFC-3-1-10), Perfluoropentane (PFC-4-1-12), Perfluorohexane (PFC-5-1-14), PFC-9-1-18, Perfluorocyclopropane, Sulphur hexafluoride (SF6), HFC-152, HFC-161, HFC-236cb, HFC-236ea, HFC-245ca, HFC-365mfc, Nitrogen trifluoride, R401A, R401B, R401C, R402A, R402B, R403A, R403B, R404A, R405A, R407A, R407B, R407C, R407D, R407E, R407F, R408A, R410A, R410B, R411A, R411B, R412A, R413A, R415A, R415B, R416A, R417A, R417B, R417C, R418A, R419A, R419B, R420A, R421A, R421B, R422A, R422B, R422C, R422D, R422E, R423A, R424A, R425A, R426A, R427A, R428A, R429A, R430A, R431A, R434A, R435A, R437A, R438A, R439A, R440A, R442A, R444A, R445A, R500, R503, R504, R507A, R508A, R508B, R509A, R511A, R512A
+• Refrigerant Quantity (Numeric Input):
+•	Unit: kg
+•	Tooltip: "Enter the mass of refrigerant released, leaked, or otherwise emitted."
