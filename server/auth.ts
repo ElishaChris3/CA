@@ -4,8 +4,7 @@ import session from "express-session";
 import { storage } from "./storage";
 import bcrypt from "bcrypt";
 import { z } from "zod";
-
-let TokenResponse;// We'll create this
+import type { TokenResponse } from "./types"; // We'll create this
 
 // Validation schemas
 const registerSchema = z.object({
