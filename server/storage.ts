@@ -644,7 +644,7 @@ export class DatabaseStorage implements IStorage {
 
   async getEsgDataKpisBySection(organizationId: number, esgSection: string): Promise<EsgDataKpi[]> {
     return await db.select().from(esgDataKpis)
-      .where(and(eq(esgDataKpis.organizationId, organizationId), eq(esgDataKpis.esgSection, esgSection)));
+      .where(and(eq(esgDataKpis.organizationId, organizationId)));
   }
 
   async getEsgDataKpisByTopic(organizationId: number, esrsTopic: string): Promise<EsgDataKpi[]> {

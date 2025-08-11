@@ -1,6 +1,6 @@
 
 import * as XLSX from 'xlsx';
-import multer from 'multer';
+import multer from "multer";
 import { Request, Response } from 'express';
 
 // Configure multer for file uploads

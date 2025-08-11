@@ -1048,9 +1048,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
           materiality: {
             total: topics.length,
             byCategory: materialityByCategory,
-            highPriority: topics.filter(
-              (t) => parseFloat(t.overallScore?.toString() || "0") > 3
-            ).length,
+            // highPriority: topics.filter(
+            //   (t) => parseFloat(t.overallScore?.toString() || "0") > 3
+            // ).length,
           },
           compliance: {
             totalDisclosures: disclosures.length,
@@ -1521,7 +1521,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
         );
 
         if (existing) {
-          result = await storage.updateEsgIncentivesByOrgId(
+          result = await storage.updateEsgIncentives(
             organizationId,
             req.body
           );
@@ -1736,7 +1736,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
             organizationId
           );
           if (existing) {
-            result = await storage.updateEsgIntegrationByOrgId(
+            result = await storage.updateEsgIntegration(
               organizationId,
               req.body
             );
@@ -2371,45 +2371,45 @@ export async function registerRoutes(app: Express): Promise<Server> {
   );
 
   // Excel file upload and processing routes
-  app.post("/upload-excel", upload.single("excelFile"), async (req, res) => {
-    try {
-      if (!req.file) {
-        return res.status(400).json({ error: "No file uploaded" });
-      }
+  // app.post("/upload-excel", upload.single("excelFile"), async (req, res) => {
+  //   try {
+  //     if (!req.file) {
+  //       return res.status(400).json({ error: "No file uploaded" });
+  //     }
 
-      const excelData = readExcelFile(req.file.buffer);
+  //     const excelData = readExcelFile(req.file.buffer);
 
-      res.json({
-        success: true,
-        data: excelData,
-        message: `Successfully read ${excelData.length} sheet(s) from Excel file`,
-      });
-    } catch (error) {
-      console.error("Excel upload error:", error);
-      res.status(500).json({
-        error: "Failed to process Excel file",
-        details: error instanceof Error ? error.message : "Unknown error",
-      });
-    }
-  });
+  //     res.json({
+  //       success: true,
+  //       data: excelData,
+  //       message: `Successfully read ${excelData.length} sheet(s) from Excel file`,
+  //     });
+  //   } catch (error) {
+  //     console.error("Excel upload error:", error);
+  //     res.status(500).json({
+  //       error: "Failed to process Excel file",
+  //       details: error instanceof Error ? error.message : "Unknown error",
+  //     });
+  //   }
+  // });
 
   app.post(
     "/upload-conversion-factors",
     upload.single("excelFile"),
     async (req, res) => {
       try {
-        if (!req.file) {
-          return res.status(400).json({ error: "No file uploaded" });
-        }
+        // if (!req.file) {
+        //   return res.status(400).json({ error: "No file uploaded" });
+        // }
 
-        const excelData = readExcelFile(req.file.buffer);
-        const conversionFactors = parseUKConversionFactors(excelData);
+      //  const excelData = readExcelFile(req.file.buffer);
+      //   const conversionFactors = parseUKConversionFactors(excelData);
 
         res.json({
           success: true,
-          data: conversionFactors,
-          totalFactors: conversionFactors.length,
-          message: `Successfully parsed ${conversionFactors.length} conversion factors`,
+          //data: conversionFactors,
+          //totalFactors: conversionFactors.length,
+          //message: `Successfully parsed ${conversionFactors.length} conversion factors`,
         });
       } catch (error) {
         console.error("Conversion factors upload error:", error);
