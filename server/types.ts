@@ -1,6 +1,6 @@
 export interface TokenResponse {
     userId: string;
-    email: string;
+    email: string | null;
     firstName: string;
     lastName: string;
     profileImageUrl: string;

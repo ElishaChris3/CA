@@ -4,7 +4,7 @@ import session from "express-session";
 import { storage } from "./storage";
 import bcrypt from "bcrypt";
 import { z } from "zod";
-import { TokenResponse } from "./types"; // We'll create this
+import type { TokenResponse } from "./types"; // We'll create this
 
 // Validation schemas
 const registerSchema = z.object({
@@ -88,7 +88,7 @@ export async function setupAuth(app: Express) {
         firstName: user.firstName || "",
         lastName: user.lastName || "",
         profileImageUrl: user.profileImageUrl || "",
-        accessToken: process.env.ACCESS_TOKEN,
+        accessToken: String(process.env.ACCESS_TOKEN),
         refreshToken: `refresh_${Date.now()}`,
       };
 
@@ -139,7 +139,7 @@ export async function setupAuth(app: Express) {
         firstName: user.firstName || "",
         lastName: user.lastName || "",
         profileImageUrl: user.profileImageUrl || "",
-        accessToken: process.env.ACCESS_TOKEN,
+        accessToken: String(process.env.ACCESS_TOKEN),
         refreshToken: `refresh_${Date.now()}`,
       };
 
@@ -215,7 +215,7 @@ export const isAuthenticated: RequestHandler = async (req, res, next) => {
         firstName: user.claims.first_name,
         lastName: user.claims.last_name,
         profileImageUrl: user.claims.profile_image_url,
-        accessToken: process.env.ACCESS_TOKEN,
+        accessToken: String(process.env.ACCESS_TOKEN),
         refreshToken: `refresh_${Date.now()}`,
       };
 
