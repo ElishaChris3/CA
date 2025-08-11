@@ -4,7 +4,7 @@ import session from "express-session";
 import { storage } from "./storage";
 import bcrypt from "bcrypt";
 import { z } from "zod";
-import type { TokenResponse } from "./types"; // We'll create this
+import { TokenResponse } from "./types"; // We'll create this
 
 // Validation schemas
 const registerSchema = z.object({
@@ -231,12 +231,12 @@ export const isAuthenticated: RequestHandler = async (req, res, next) => {
 };
 
 // Add types.ts file:
-export interface TokenResponse {
-  userId: string;
-  email: string;
-  firstName: string;
-  lastName: string;
-  profileImageUrl: string;
-  accessToken: string;
-  refreshToken: string;
-}
+// export interface TokenResponse {
+//   userId: string;
+//   email: string;
+//   firstName: string;
+//   lastName: string;
+//   profileImageUrl: string;
+//   accessToken: string;
+//   refreshToken: string;
+// }
